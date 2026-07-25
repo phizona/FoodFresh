@@ -1,10 +1,26 @@
+   import Hero from "../../components/home/Hero/Hero";
+   import Categories from "../../components/home/Categories/Categories";
+// import Features from "../../components/home/Features/Features";
+// import FeaturedProducts from "../../components/home/FeaturedProducts/FeaturedProducts";
+// import PromoBanner from "../../components/home/PromoBanner/PromoBanner";
+// import BestSellers from "../../components/home/BestSellers/BestSellers";
+// import Testimonials from "../../components/home/Testimonials/Testimonials";
+// import NewsletterCTA from "../../components/home/NewsletterCTA/NewsletterCTA";
+// import FAQ from "../../components/home/FAQ/FAQ";
+
 function Home() {
   return (
-    <section className="p-10">
-      <h1 className="text-4xl font-bold">
-        Welcome to FoodFresh!
-      </h1>
-    </section>
+    <>
+      <Hero />
+      <Categories />
+      {/* <Features />
+      <FeaturedProducts />
+      <PromoBanner />
+      <BestSellers />
+      <Testimonials />
+      <NewsletterCTA />
+      <FAQ /> */}
+    </>
   );
 }
 
