@@ -8,42 +8,12 @@ interface CategoryCardProps {
   slug: string;
 }
 
-function CategoryCard({
-  name,
-  image,
-  productCount,
-  slug,
+function CategoryCard({name, image, productCount, slug,
 }: CategoryCardProps) {
   return (
-    <Link
-      to={`/categories/${slug}`}
-      className="
-        group
-        overflow-hidden
-        rounded-[var(--radius-2xl)]
-        border
-        border-[var(--color-border)]
-        bg-white
-        shadow-[var(--shadow-sm)]
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:shadow-[var(--shadow-lg)]
-      "
-    >
+    <Link to={`/categories/${slug}`} className="group overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border)] bg-whiteshadow-[var(--shadow-sm)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[var(--shadow-lg)]">
       <div className="aspect-square overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="
-            h-full
-            w-full
-            object-cover
-            transition-transform
-            duration-500
-            group-hover:scale-110
-          "
-        />
+        <img src={image} alt={name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"/>
       </div>
 
       <div className="p-5">
@@ -55,22 +25,9 @@ function CategoryCard({
           {productCount} Products
         </p>
 
-        <div
-          className="
-            mt-5
-            flex
-            items-center
-            gap-2
-            font-medium
-            text-[var(--color-primary)]
-          "
-        >
+        <div className="mt-5 flex items-center gap-2 font-medium text-[var(--color-primary)]">
           Explore
-
-          <ArrowRight
-            size={18}
-            className="transition-transform group-hover:translate-x-1"
-          />
+          <ArrowRight size={18} className="transition-transform group-hover:translate-x-1"/>
         </div>
       </div>
     </Link>

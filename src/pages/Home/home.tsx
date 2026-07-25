@@ -1,6 +1,6 @@
    import Hero from "../../components/home/Hero/Hero";
    import Categories from "../../components/home/Categories/Categories";
-// import Features from "../../components/home/Features/Features";
+   import Features from "../../components/home/Features/Features";
 // import FeaturedProducts from "../../components/home/FeaturedProducts/FeaturedProducts";
 // import PromoBanner from "../../components/home/PromoBanner/PromoBanner";
 // import BestSellers from "../../components/home/BestSellers/BestSellers";
@@ -13,13 +13,13 @@ function Home() {
     <>
       <Hero />
       <Categories />
-      {/* <Features />
-      <FeaturedProducts />
-      <PromoBanner />
-      <BestSellers />
-      <Testimonials />
-      <NewsletterCTA />
-      <FAQ /> */}
+      <Features />
+      {/* <FeaturedProducts /> */}
+      {/* <PromoBanner /> */}
+      {/* <BestSellers /> */}
+      {/* <Testimonials /> */}
+      {/* <NewsletterCTA /> */}
+      {/* <FAQ /> */}
     </>
   );
 }

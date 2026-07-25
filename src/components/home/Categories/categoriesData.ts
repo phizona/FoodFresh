@@ -1,9 +1,4 @@
-import {
-  bakeryImage,
-  dairyImage,
-  fruitsImage,
-  vegetablesImage,
-} from "../../../assets";
+import { bakeryImage, dairyImage, fruitsImage, vegetablesImage,} from "../../../assets";
 
 export interface Category {
   id: number;

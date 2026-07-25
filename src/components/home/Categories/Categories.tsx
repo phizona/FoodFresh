@@ -1,8 +1,6 @@
 import Container from "../../ui/Container/Container";
 import Heading from "../../ui/Heading/Heading";
-
 import CategoryCard from "../../commons/CategoryCard/CategoryCard";
-
 import { categories } from "./categoriesData";
 
 function Categories() {
@@ -20,20 +18,9 @@ function Categories() {
           </p>
         </div>
 
-        <div
-          className="
-            mt-14
-            grid
-            gap-8
-            sm:grid-cols-2
-            lg:grid-cols-4
-          "
-        >
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category) => (
-            <CategoryCard
-              key={category.id}
-              {...category}
-            />
+            <CategoryCard key={category.id} {...category} />
           ))}
         </div>
       </Container>

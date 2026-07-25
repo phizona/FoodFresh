@@ -6,7 +6,7 @@ function HeroImage() {
     <div className="relative mx-auto w-full max-w-2xl">
       {/* Main Image */}
       <div className="overflow-hidden rounded-[var(--radius-3xl)] shadow-[var(--shadow-xl)]">
-         <img src={heroGroceries} alt="Fresh groceries" className="h-full w-full object-cover" />
+        <img src={heroGroceries} alt="Fresh groceries" className="h-full w-full object-cover" />
       </div>
 
       {/* Discount Card */}
