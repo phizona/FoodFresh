@@ -18,7 +18,7 @@ function Navbar() {
 
         <NavLinks />
 
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           <IconButton icon={<Search size={20} />} aria-label="Search"/>
 
           <IconButton icon={<Heart size={20} />} aria-label="Wishlist"/>
@@ -40,13 +40,41 @@ function Navbar() {
           <div className="lg:hidden">
             <IconButton icon={<Menu size={20} />} aria-label="Open menu" onClick={() => setIsMenuOpen(true)}/>
           </div>
-        </div>
-      </Container>
-     </header>
-     <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}/>
-   </>
+        </div> */}
+        {/* Desktop actions */}
+        <div className="hidden lg:flex items-center gap-3">
+          <IconButton icon={<Search size={20} />} aria-label="Search" />
+          <IconButton icon={<Heart size={20} />} aria-label="Wishlist" />
 
-    
+          <div className="relative">
+           <IconButton icon={<ShoppingCart size={20} />} aria-label="Shopping Cart"/>
+           <Badge className="absolute -right-2 -top-2 min-h-5 min-w-5 justify-center p-0" size="sm">
+              2
+           </Badge>
+          </div>
+
+          <Button size="sm">
+            Sign In
+          </Button>
+        </div>
+
+        {/* Mobile actions */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <div className="relative">
+            <IconButton icon={<ShoppingCart size={20} />} aria-label="Shopping Cart"/>
+
+            <Badge className="absolute -right-2 -top-2 min-h-5 min-w-5 justify-center p-0" size="sm">
+              2
+           </Badge>
+          </div>
+
+          <IconButton icon={<Menu size={20} />} aria-label="Open menu" onClick={() => setIsMenuOpen(true)}/>
+       </div>
+      </Container>
+      </header>
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}/>
+   </>
+  
   );
 }
 

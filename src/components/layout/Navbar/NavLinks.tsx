@@ -14,13 +14,8 @@ function NavLinks() {
     <nav className="hidden items-center gap-8 lg:flex">
       {links.map((link) => (
         <NavLink key={link.path} to={link.path} className={({ isActive }) =>
-         clsx(
-            "font-medium transition-colors duration-200 hover:text-[var(--color-primary)]",
-            isActive
-            ? "text-[var(--color-primary)]"
-            : "text-[var(--color-text-primary)]"
-            )
-          }>
+         clsx(  "font-medium transition-colors duration-200 hover:text-[var(--color-primary)]",
+         isActive ? "text-[var(--color-primary)]" : "text-[var(--color-text-primary)]" ) }>
           {link.label}
         </NavLink>
       ))}
