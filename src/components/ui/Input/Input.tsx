@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import type { InputHTMLAttributes, ReactNode } from "react";
+import { useId } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -21,8 +22,13 @@ function Input({
   disabled,
   ...props
 }: InputProps) {
+  const generatedId = useId();
   const inputId =
-    id ?? `input-${label?.toLowerCase().replace(/\s+/g, "-") ?? "field"}`;
+  id ??
+  (label
+    ? `input-${label.toLowerCase().replace(/\s+/g, "-")}`
+    : generatedId
+  );
 
   const helperId = `${inputId}-helper`;
   const errorId = `${inputId}-error`;
